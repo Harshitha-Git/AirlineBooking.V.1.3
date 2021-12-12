@@ -1,28 +1,62 @@
 <div class="card">
     <div class="card-body" style="text-align: center">
-        <h3>Online Bus Ticket Booking</h3>
+        <h3>AirBus Ticket Booking</h3>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <br>
         <div class="card" style="background:snow">
             <div class="card-body">
-                <h3>Search Bus</h3>
+                <h3>Search Flight</h3>
                 <form #checkAvailForm="ngForm" (ngSubmit)="checkAvail(checkAvailForm)">
                     <fieldset>
+                        <div class="row" data-toggle="buttons">
+                            <div class="col-sm-6">
+                                <label class="btn btn-primary">
+                                    <input type="radio" #oneWay="ngModel" ngModel name="oneWay" id="oneWay" value="option1" />
+                                    <span> One way</span>
+                                  </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="btn btn-primary">
+                                    <input type="radio" #roundTrip="ngModel" ngModel name="roundTrip" id="RoundTrip" value="option2"/>
+                                    <span> Round Trip</span>
+                                  </label>
+                            </div>
+                            </div>
+                        <div class="row">
+                            <div class="col">
                         <label for="startingPoint" class="text-success"> <b>FROM: </b></label>
                         <input type="text" #startingPoint="ngModel" ngModel name="startingPoint" id="startingPoint"
                             class="form-control" required placeholder="Enter starting Point ">
-
+                            </div>
+                            <div class="col">
                         <label for="endingPoint" class="text-success"> <b>TO: </b></label>
                         <input type="text" #endingPoint="ngModel" ngModel name="endingPoint" id="endingPoint"
                             class="form-control" required placeholder="Enter ending Point ">
-
-                        <label for="availableDate" class="text-success"> <b>DATE: </b></label>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                        <label for="availableDate" class="text-success"> <b>Date of Departure: </b></label>
                         <input type="date" #availableDate="ngModel" ngModel name="availableDate" id="availableDate"
                             class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="availableDate" class="text-success"> <b>Date of Return: </b></label>
+                                <input type="date" #availableDate="ngModel" ngModel name="availableDate" id="availableDate"
+                                    class="form-control">
+                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                        <label for="numberOfPassengers" class="text-success"> <b>Number of Passengers: </b></label>
+                        <input type="number" #numberOfPassengers="ngModel" ngModel name="numberOfPassengers" id="numberOfPassengers"
+                            class="form-control">
+                            </div>
+                            </div>
                         <br>
                         <button class="btn btn-primary" [disabled]="checkAvailForm.invalid">Search</button>
                     </fieldset>

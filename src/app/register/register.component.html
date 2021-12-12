@@ -3,17 +3,25 @@
     <form #registerUser="ngForm" (ngSubmit)="user(registerUser)">
         <h1 class="h1 text-center">Registration Form</h1>
         <div class="form-group">
-            <label for="userId" class="text-success">User Id</label>
-            <input type="number" #userId="ngModel" ngModel name="userId" id="userId" class="form-control" required placeholder="Enter User Id">
-            <div *ngIf="userId.touched && userId.invalid">
-                <p class="alert alert-danger"> *This field is required</p>
+            <label for="Title" class="text-success">Title</label>
+            <input type="text" #Title="ngModel" ngModel name="Title" id="Title" class="form-control" required placeholder="Enter Title">
+            <div *ngIf="Title.touched && Title.invalid">
+                <p class="alert alert-danger"> This field is required</p>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="userName" class="text-success">Name</label>
-            <input type="text" #userName="ngModel" ngModel name="userName" id="userName" class="form-control" required placeholder="Enter user name">
-            <div *ngIf="userName.touched && userName.invalid">
+            <label for="firstName" class="text-success">First Name</label>
+            <input type="text" #firstName="ngModel" ngModel name="firstName" id="firstName" class="form-control" required placeholder="Enter first name">
+            <div *ngIf="firstName.touched && firstName.invalid">
+                <p class="alert alert-danger"> This field is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName" class="text-success">Last Name</label>
+            <input type="text" #lastName="ngModel" ngModel name="lastName" id="lastName" class="form-control" required placeholder="Enter last name">
+            <div *ngIf="lastName.touched && lastName.invalid">
                 <p class="alert alert-danger"> This field is required</p>
             </div>
         </div>
@@ -28,24 +36,41 @@
         </div>
 
         <div class="form-group">
-            <label for="userPassword" class="text-success">Password </label>
-            <input type="password" #userPassword="ngModel" ngModel name="userPassword" id="userPassword"
+            <label for="Password" class="text-success">Password </label>
+            <input type="password" #Password="ngModel" ngModel name="Password" id="Password"
                 class="form-control" required placeholder="Enter password">
-            <div *ngIf="userPassword.touched && userPassword.invalid">
+            <div *ngIf="Password.touched && Password.invalid">
                 <p class="alert alert-danger"> This field is required</p>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="userMobile" class="text-success">Contact Number </label>
-            <input type="number" #userMobile="ngModel" ngModel name="userMobile" id="userMobile" class="form-control"
+            <label for="confirmPassword" class="text-success">Confirm Password </label>
+            <input type="confirmpassword" #confirmPassword="ngModel" ngModel name="confirmPassword" id="confirmPassword"
+                class="form-control" required placeholder="Enter password">
+            <div *ngIf="confirmPassword.touched && confirmPassword.invalid">
+                <p class="alert alert-danger"> This field is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Phone" class="text-success">Contact Number </label>
+            <input type="Phone" #userMobile="ngModel" ngModel name="Phone" id="Phone" class="form-control"
                 required placeholder="Enter Contact">
         </div>
-        <div *ngIf="userMobile.touched && userMobile.invalid">
+        <div *ngIf="Phone.touched && Phone.invalid">
             <p class="alert alert-danger"> This field is required</p>
         </div>
-        <input type="hidden" name="type" id="type" #type="ngModel" [(ngModel)]=name>
-        <button type="submit" class="btn btn-outline-info btn-block form-control" [disabled]="registerUser.invalid">Register </button>
+        <div class="row">
+            <div class="col">
+                <input type="hidden" name="submit" id="submit" #submit="ngModel" [(ngModel)]=name>
+                <button type="submit" class="btn btn-primary btn-block form-control" [disabled]="registerUser.invalid">Register</button>
+            </div>
+            <div class="col">
+                <input type="hidden" name="cancel" id="cancel" #cancel="ngModel" [(ngModel)]=name>
+                <button type="submit" class="btn btn-danger btn-block form-control" [disabled]="registerUser.invalid">Cancel</button>
+            </div>
+        </div>
     </form>
     </div>
 </div>
