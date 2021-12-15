@@ -28,6 +28,7 @@ import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 import { GiveFeedbackComponent } from './give-feedback/give-feedback.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FooterComponent } from './footer/footer.component';
     CancelTicketComponent,
     GiveFeedbackComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

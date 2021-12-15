@@ -18,6 +18,7 @@ import { CheckAvaliabilityComponent } from './check-avaliability/check-avaliabil
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { CancelTicketComponent } from './cancel-ticket/cancel-ticket.component';
 import { GiveFeedbackComponent } from './give-feedback/give-feedback.component';
+import { PaymentComponent } from './payment/payment.component';
 import { HomeComponent } from './home/home.component';
 
 
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path: 'checkAvaliability', component: CheckAvaliabilityComponent},
   {path: 'updateUser', component: UpdateUserComponent},
   {path: 'cancelTicket', component: CancelTicketComponent},
-  {path: 'giveFeedback', component: GiveFeedbackComponent}
+  { path: 'giveFeedback', component: GiveFeedbackComponent },
+  {path: 'payment', component: PaymentComponent}
 ];
 
 @NgModule({
