@@ -1,12 +1,12 @@
-<div class="col-md-4 offset-4 mt-6 card" style="background:darkgrey">
+<div class="col-md-4 offset-4 mt-6 card">
     <div class="card-body">
         <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-            <h1 class="h1 text-center">Login Form</h1>
+            <h1 class="h1 text-center"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Air_Astana_logo.svg/2560px-Air_Astana_logo.svg.png" alt="logo" width="150" height="50"></h1>
             <div class="form-group">
-                <label for="userEmail" class="text-success">E-mail</label>
+                <label for="userName" class="text-success">user name</label>
                 <input type="text" #userName="ngModel" ngModel name="userName" id="userName" class="form-control"
                     placeholder="Enter E-mail">
-                <div *ngIf="userEmail.touched && userEmail.invalid">
+                <div *ngIf="userName.touched && userName.invalid">
                     <p class="alert alert-danger"> *This field is required</p>
                 </div>
             </div>

@@ -15,13 +15,13 @@
                         <div class="row" data-toggle="buttons">
                             <div class="col-sm-6">
                                 <label class="btn btn-primary">
-                                    <input type="radio" #oneWay="ngModel" ngModel name="oneWay" id="oneWay" value="option1" />
+                                    <input type="radio" name="trip" value="oneWay" (click)="setradio('oneWay')" [checked]='true' ngModel>
                                     <span> One way</span>
                                   </label>
                             </div>
                             <div class="col-sm-6">
                                 <label class="btn btn-primary">
-                                    <input type="radio" #roundTrip="ngModel" ngModel name="roundTrip" id="RoundTrip" value="option2"/>
+                                    <input type="radio" name="trip" value="roundTrip" (click)="setradio('roundTrip')" ngModel>
                                     <span> Round Trip</span>
                                   </label>
                             </div>
@@ -39,12 +39,17 @@
                         </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col" *ngIf="isSelected('oneWay')">
                         <label for="availableDate" class="text-success"> <b>Date of Departure: </b></label>
                         <input type="date" #availableDate="ngModel" ngModel name="availableDate" id="availableDate"
                             class="form-control">
                             </div>
-                            <div class="col">
+                            <div class="col" *ngIf="isSelected('roundTrip')">
+                                <label for="availableDate" class="text-success"> <b>Date of Departure: </b></label>
+                                <input type="date" #availableDate="ngModel" ngModel name="availableDate" id="availableDate"
+                                    class="form-control">
+                                    </div>
+                            <div class="col" *ngIf="isSelected('roundTrip')">
                                 <label for="availableDate" class="text-success"> <b>Date of Return: </b></label>
                                 <input type="date" #availableDate="ngModel" ngModel name="availableDate" id="availableDate"
                                     class="form-control">

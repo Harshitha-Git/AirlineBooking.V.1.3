@@ -8,6 +8,20 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./check-avaliability.component.css']
 })
 export class CheckAvaliabilityComponent implements OnInit {
+
+  private selectedLink: string="oneWay";        
+  setradio(e: string): void   
+  {  
+    this.selectedLink = e;           
+  }  
+    isSelected(name: string): boolean   
+  {  
+        if (!this.selectedLink) {   
+            return false;  
+  }  
+        return (this.selectedLink === name);   
+  }  
+  
   avails: any[] = [];
   check: any = null;
   

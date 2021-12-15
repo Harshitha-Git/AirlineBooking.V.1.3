@@ -17,9 +17,7 @@ export class HeaderComponent implements OnInit {
   get isAdminLogin() {
     return this.loginService.isAdminLogin();
   }
-  get isOwnerLogin() {
-    return this.loginService.isOwnerLogin();
-  }
+
   get isCustomerLogin() {
     return this.loginService.isCustomerLogin();
   }
@@ -28,7 +26,6 @@ export class HeaderComponent implements OnInit {
   }
   logout() {
     this.loginService.isAdminLoggedIn = false;
-    this.loginService.isOwnerLoggedIn = false;
     this.loginService.isCustomerLoggedIn = false;
     this.router.navigateByUrl('/');
   }

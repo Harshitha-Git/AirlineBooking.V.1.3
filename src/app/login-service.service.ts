@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginServiceService {
   isAdminLoggedIn = false;
-  isOwnerLoggedIn = false;
   isCustomerLoggedIn = false;
   constructor(private http: HttpClient) { }
 
@@ -18,13 +17,7 @@ export class LoginServiceService {
       return false;
     }
   }
-  isOwnerLogin() {
-    if (this.isOwnerLoggedIn) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  
     isCustomerLogin() {
       if (this.isCustomerLoggedIn) {
         return true;

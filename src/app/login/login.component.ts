@@ -20,11 +20,7 @@ export class LoginComponent implements OnInit {
     this.http.post<any>(`http://localhost:8080/ParallelProjectByusing_SpringRest/login`, loginForm.value).subscribe(data => {
       console.log(data.user.type);
       this.users = data.user;
-      if (data.user.type === 'owner') {
-        window.confirm('login successfull');
-        this.loginService.isOwnerLoggedIn = true;
-        this.router.navigateByUrl('/');
-      } else if (data.user.type === 'enjoyer') {
+       if (data.user.type === 'enjoyer') {
         window.confirm('Login Successful');
         this.loginService.isCustomerLoggedIn = true;
         this.router.navigateByUrl('/');

@@ -1,4 +1,5 @@
-<div class="col-md-5 offset-md-4 card card-body mt-5">
+<div class="ticket">
+<div class="col-md-5 offset-md-4 card card-body">
     <form #bookTicketForm="ngForm" (ngSubmit)="bookTicket(bookTicketForm)">
         <h1 class="bg-info text-light card" align="center">Book Ticket</h1>
         <h6 class="text-danger float-right">*Required Fields</h6>
@@ -22,4 +23,5 @@
         </div>
         <button type="submit" class="btn btn-primary float-center" [disabled]="bookTicketForm.invalid">Confirm</button>
     </form>
+</div>
 </div>
