@@ -6,8 +6,8 @@
         <div class="form-group">
             <label for="busId" class="text-success">Seats to book
             </label>
-            <input type="text" #busId="ngModel" ngModel name="busId" id="busId" class="form-control"
-                required placeholder="Enter  Bus Id">
+            <input type="text" #busId="ngModel" ngModel name="busId" id="flightId" class="form-control"
+                required placeholder="Enter Flight Id">
             <div *ngIf="busId.touched && busId.invalid">
                 <p class="alert alert-danger"> This field is required</p>
             </div>

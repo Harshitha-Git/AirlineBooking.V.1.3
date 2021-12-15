@@ -24,13 +24,13 @@
 
             <!-- OWNER PERFORMANCE -->
             <li class="nav-item active" *ngIf="isOwnerLogin">
-                <a class="nav-link" routerLink="addBus"><b>Add Bus</b> </a>
+                <a class="nav-link" routerLink="addBus"><b>Add Flight</b> </a>
             </li>
             <li class="nav-item active" *ngIf="isOwnerLogin">
-                <a class="nav-link" routerLink="updateBus"><b>Update Bus</b> </a>
+                <a class="nav-link" routerLink="updateBus"><b>Update Flight</b> </a>
             </li>
             <li class="nav-item active" *ngIf="isOwnerLogin">
-                <a class="nav-link" routerLink="deleteBus"><b>Delete Bus</b> </a>
+                <a class="nav-link" routerLink="deleteBus"><b>Delete Flight</b> </a>
             </li>
             <!-- <li class="nav-item active" *ngIf="isOwnerLogin">
                 <a class="nav-link" routerLink="getAllTickets"><b>Get All Tickets</b> </a>
@@ -39,7 +39,7 @@
                 <a class="nav-link" routerLink="getAllFeedbacks"><b>Get All Feedbacks</b> </a>
             </li> -->
             <li class="nav-item active" *ngIf="isOwnerLogin">
-                <a class="nav-link" routerLink="showAllBuses"><b>Show All Buses</b> </a>
+                <a class="nav-link" routerLink="showAllBuses"><b>Show All Flights</b> </a>
             </li>
             <!-- <li class="nav-item active" *ngIf="isOwnerLogin">
                 <a class="nav-link" routerLink="setAvaliability"><b>Set Avaliability</b></a>
@@ -47,16 +47,19 @@
 
 
             <!-- CUSTOMER PERFORMANCE -->
-            <li class="nav-item active" *ngIf="isCustomerLogin">
+            <li class="nav-item active">
                 <a class="nav-link" routerLink="checkAvaliability"><b>Check Avaliability</b></a>
             </li>
-            <li class="nav-item active" *ngIf="getavalia && isCustomerLogin">
+            <li class="nav-item active">
                 <a class="nav-link" routerLink="bookTicket"><b>Book Ticket</b></a>
             </li>
-            <li class="nav-item active" *ngIf="isCustomerLogin">
+            <li class="nav-item active">
                 <a class="nav-link" routerLink="viewTicket"><b>View Ticket</b></a>
             </li>
-            <li class="nav-item active" *ngIf="isCustomerLogin">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="payment"><b>Payment</b></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" routerLink="cancelTicket"><b>Cancel Ticket</b></a>
             </li>
             <li class="nav-item active" *ngIf="isCustomerLogin">
@@ -74,7 +77,7 @@
             <li class="nav-item active" *ngIf="isCustomerLogin">
                 <a class="nav-link" routerLink="updateUser"><b>Profile</b></a>
             </li>
-            <li class="nav-item active" *ngIf="isAdminLogin || isOwnerLogin || isCustomerLogin">
+            <li class="nav-item active">
                 <button type="button" class="btn btn-outline-danger" (click)="logout()"><b>Logout</b></button>
             </li>
         </ul>
