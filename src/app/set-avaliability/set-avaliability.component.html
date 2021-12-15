@@ -21,10 +21,10 @@
         </div>
 
         <div class="form-group">
-            <label for="busId" class="text-success">Available Bus Id<h6 class="text-danger float-right">*</h6></label>
-            <input type="number" #busId="ngModel" ngModel name="busId" id="busId" class="form-control"
-                required placeholder="Enter bus id">
-            <div *ngIf="busId.touched && busId.invalid">
+            <label for="flightId" class="text-success">Available Flight Id<h6 class="text-danger float-right">*</h6></label>
+            <input type="number" #FlightId="ngModel" ngModel name="FlightId" id="busId" class="form-control"
+                required placeholder="Enter Flight id">
+            <div *ngIf="flightId.touched && busId.invalid">
                 <p class="alert alert-danger"> This field is required</p>
             </div>
         </div>
